@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import 'hammerjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule } from "@angular/material";
+import { MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule, MatSnackBarModule } from "@angular/material";
 import { ListComponent } from './list/list.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -46,7 +46,8 @@ const routes: Routes = [
     MatCardModule, 
     MatSlideToggleModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MatSnackBarModule
   ],
   providers: [GeolocationService, DataService],
   bootstrap: [AppComponent]
