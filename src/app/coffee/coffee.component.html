@@ -44,7 +44,7 @@
   </mat-card-subtitle>
 
 
-    <mat-slide-toggle #tastingSelector (change)="tastingRatingChecked(tastingSelector.checked)">tasting Ratings</mat-slide-toggle>
+    <mat-slide-toggle #tastingSelector (change)="tastingRatingChecked(tastingSelector.checked)" [checked]="tastingEnabled">tasting Ratings</mat-slide-toggle>
     <section id="tastings" *ngIf="tastingSelector.checked">
       <label>Aroma</label>
       <mat-slider max="10" thumbLabel name="aromaRating" [(ngModel)]="coffee.tastingRating.aroma" tickInterval="1"></mat-slider>

@@ -1,3 +1,5 @@
+//https://mighty-mesa-30418.herokuapp.com/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,13 +17,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {FormsModule} from '@angular/forms';
 
+import { HttpModule } from '@angular/Http';
+
 
 const routes: Routes = [
       {path:'', component:ListComponent},
       {path:'coffee', component:CoffeeComponent},
       {path:'coffee/:id', component:CoffeeComponent}
 ]
-
 
 
 @NgModule({
@@ -42,7 +45,8 @@ const routes: Routes = [
     MatToolbarModule, 
     MatCardModule, 
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [GeolocationService, DataService],
   bootstrap: [AppComponent]
