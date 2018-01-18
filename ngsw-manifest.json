@@ -1,0 +1,64 @@
+{
+  "routing": {
+    "index": "/index.html",
+    "routes": {
+      "/": {
+        "match": "exact"
+      },
+      "/coffee": {
+        "match": "prefix"
+      }
+    }
+  },
+  "external": {
+    "urls": [
+      {
+        "url": "https://fonts.googleapis.com/icon?family=Material+Icons"
+      },
+      {
+        "url": "https://fonts.gstatic.com/s/materialicons/v34/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2"
+      }
+    ]
+  },
+  "dynamic": {
+    "group": [
+      {
+        "name": "api",
+        "urls": {
+          "https://mighty-mesa-30418.herokuapp.com/coffees": {
+            "match": "prefix"
+          }
+        },
+        "cache": {
+          "optimizeFor": "performance",
+          "networkTimeoutMs": 1000,
+          "maxEntries": 30,
+          "strategy": "lru",
+          "maxAgeMs": 360000000
+        }
+      }
+    ]
+  },
+  "push": {
+    "showNotifications": true,
+    "backgroundOnly": false
+  },
+  "static": {
+    "urls": {
+      "coffeeRate/polyfills.f039bbc7aaddeebcb9aa.bundle.js": "ec292c1398cd4840a95d336fd9fff0174168c066",
+      "coffeeRate/main.d4008c5e2863e62c1aec.bundle.js": "75a79f8357741ae8685a492e0f9b99f921068955",
+      "coffeeRate/sw-register.6819cd2c5fa25470ecf2.bundle.js": "50d549edfbd188ed199d8d0b079afa593202e3ea",
+      "coffeeRate/inline.d97a290afd83ef65bad9.bundle.js": "09efee2522745c7faef592faac792c6c4a38849d",
+      "coffeeRate/styles.7db8dbdd9284cbeb2baf.bundle.css": "1f83ef4c41d4f9d191a40cdd3aee27058c18027a",
+      "coffeeRate/manifest.json": "058b4964086b7d09ae4174832f1b18757f94b7a6",
+      "coffeeRate/icons/icon_192.png": "2a884d09d0661bd72e5d0ab1f41a9ed0cb4dcafe",
+      "coffeeRate/icons/icon_144.png": "b39fc1ac395cea6245b6f2eb59e76d9fe11f5eec",
+      "coffeeRate/icons/icon_96.png": "8439cec43025efda8ced76721bae97291a5bb0e6",
+      "coffeeRate/icons/icon_512.png": "5f8d02c6aca3f10a76c4e1ce869f8485a5a41b5f",
+      "coffeeRate/icons/icon_ios_180.png": "58bbea5b50acbe5e255e06ae032da1365192f4cf",
+      "coffeeRate/icons/icon_ios_120.png": "d4987bb020409fbdf71d066c4ac259ba77c05fd6",
+      "coffeeRate/index.html": "f610e6500fbfc7f591a2877e326f41d52f6c0198"
+    },
+    "_generatedFromWebpack": true
+  }
+}
