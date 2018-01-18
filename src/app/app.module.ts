@@ -1,4 +1,5 @@
 //https://mighty-mesa-30418.herokuapp.com/
+//npm install --save @angular/service-worker@"~1.0.0-beta"
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,7 @@ import { AppComponent } from './app.component';
 
 import 'hammerjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ServiceWorkerModule} from '@angular/service-worker';
 
 import { MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule, MatToolbarModule, MatCardModule, MatSlideToggleModule, MatSnackBarModule } from "@angular/material";
 import { ListComponent } from './list/list.component';
@@ -47,7 +49,8 @@ const routes: Routes = [
     MatSlideToggleModule,
     FormsModule,
     HttpModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ServiceWorkerModule
   ],
   providers: [GeolocationService, DataService],
   bootstrap: [AppComponent]
